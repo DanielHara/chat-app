@@ -25,7 +25,7 @@ export const SendMessageForm = ({ onSuccess }: ISendMessageFormProps) => {
         form.reset();
         
         // Simulate API call, and onSuccess should be called with the payload of a successful POST API call (including the id of posted message)
-        Promise.resolve(1000).then(() => {
+        new Promise(resolve => setTimeout(resolve, 100)).then(() => {
             onSuccess({
                 id: String(Math.random()),
                 text,
