@@ -8,6 +8,7 @@ Only:
 2. Choosing a conversation partner from a list.
 
 Other requirements which are out of scope for this project, for now, are:
+
 Functional:
 1. Authentication
 2. Groups
