@@ -1,0 +1,14 @@
+.base {
+    width: 100%;
+    display: inline-block;
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+
+.primary {
+    background-color: white;
+}
+
+.secondary {
+    background-color: green;
+}
