@@ -49,7 +49,7 @@ interface Message {
 In a production app, we'd need some APIs to fetch and send messages.
 
 To fetch:
-`/fetchMessages?conversationPartnerUsername=my_friend?cursor_id={cursor_id}` -> `Messages[]`
+`/fetchMessages?conversationPartnerUsername=my_friend?cursor_id={cursor_id}` -> `Message[]`
 
 If you have too many messages (for example, by a friend you text everyday), you should have some pagination in place. I'd prefer cursor-based pagination over offset-based pagination, because messages get added quickly.
 
