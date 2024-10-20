@@ -1,9 +1,13 @@
 import './Chat.css';
+
+import { useState } from 'react'
+
 import { MessageList } from './MessageList';
+import { SendMessageForm } from './SendMessageForm'
 import { EStyle } from './types'
 
 export const Chat = () => {
-    const messages = [{
+    const [messages, setMessages] = useState([{
         id: '1',
         text: 'abc',
         username: 'daniel',
@@ -13,16 +17,16 @@ export const Chat = () => {
         text: 'def',
         username: 'alice',
         style: EStyle.SECONDARY
-    }];
+    }]);
 
     return <div className="chat">
         <MessageList messages={messages} />
-        <form>
-            <label>Type your message here:</label>
-            <input />
-            <button>
-                Send
-            </button>
-        </form>
+        <SendMessageForm onSuccess={(message) => {
+            const postedMessage = {
+                ...message,
+                style: message.username === 'daniel' ? EStyle.PRIMARY : EStyle.SECONDARY,
+            }
+            setMessages(messages => messages.concat(postedMessage))
+        }}/>
     </div>
 }
