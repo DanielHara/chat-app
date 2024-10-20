@@ -34,6 +34,7 @@ Approximately 2 hours.
 ```
 npm install && npm start
 ```
+And access `http://localhost:3000/`
 
 ## Points for improvement and optimization:
 ### API Architecture
